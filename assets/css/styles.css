@@ -81,45 +81,47 @@ h2 {
     }
 
     h1 {
-        font-size: 6rem;
+        font-size: 6.5vw;
     }
     
     h2 {
-        font-size: 2rem;
+        font-size: 3vw;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 
     .fa {
-        margin: 2rem;
+        margin: 2.5vw;
     }
 
     .socials-icon {
-        font-size: 6em;
+        font-size: 8vw;
     }
 }
 
 /* For smaller screens */
 @media screen and (max-width: 600px) {
     .profile-photo {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 8vw;
     }
     
     h2 {
-        font-size: 1rem;
+        font-size: 4.5vw;
     }
 
     .fa {
-        margin: .8rem;
+        margin: 3vw;
     }
 
     .socials-container {
-        margin-top: 1.5rem;
+        margin-top: 4vw;
     }
 
     .socials-icon {
-        font-size: 4em;
+        font-size: 18vw;
     }
 }
