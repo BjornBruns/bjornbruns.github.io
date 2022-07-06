@@ -28,10 +28,9 @@ body {
 }
 
 .profile-photo {
-    width: 20rem;
     height: auto;
     border-radius: 50%;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 
 h1 {
@@ -47,11 +46,10 @@ h1 {
 h2 {
     font-family: "Bitter", serif;
     text-align: center;
-    font-size: 2rem;
     font-weight: 100;
     letter-spacing: .0075em;
     line-height: 1.65;
-    margin-top: 0rem;
+    margin-top: 1rem;
     color: var(--text-color);
 }
 
@@ -59,11 +57,6 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-.fa {
-    padding: 1rem;
-    margin: 1rem;
 }
 
 .fa:hover {
@@ -80,4 +73,54 @@ h2 {
 
 .fa-envelope-square {
     color: #D7A6B3;
+}
+
+/* For wider screens */
+@media screen and (min-width: 601px) {
+    .profile-photo {
+        max-width: 20rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+
+    .fa {
+        margin: 2rem;
+    }
+
+    .socials-icon {
+        font-size: 6em;
+    }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 600px) {
+    .profile-photo {
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+
+    .fa {
+        margin: .8rem;
+    }
+
+    .socials-container {
+        margin-top: 1.5rem;
+    }
+
+    .socials-icon {
+        font-size: 4em;
+    }
 }
