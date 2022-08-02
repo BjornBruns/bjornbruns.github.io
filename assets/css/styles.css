@@ -77,25 +77,26 @@ h2 {
 @media screen and (min-width: 601px) {
     .profile-photo {
         max-width: 20rem;
-        margin: 0vh 2vw 0vh 2vw;
+        margin: 6vh 2vw 0vh 2vw;
     }
 
     h1 {
-        font-size: 6.5vw;
+        font-size: max(40px, min(4.5vw, 80px));
     }
     
     h2 {
-        font-size: 3vw;
+        /* Minimum size, scaling, maximum size */
+        font-size: max(20px, min(2.5vw, 30px));
         margin-left: 20%;
         margin-right: 20%;
     }
 
     .fa {
-        margin: 1vh 2.5vw 1vh 2.5vw;
+        margin: 1vh 1vw 1vh 1vw;
     }
 
     .socials-icon {
-        font-size: 8vw;
+        font-size: 70px;
     }
 }
 
@@ -123,6 +124,6 @@ h2 {
     }
 
     .socials-icon {
-        font-size: 18vw;
+        font-size: 14vw;
     }
 }
