@@ -1,129 +1,115 @@
 :root {
-    --text-color: #0f1b61;
-    --bg-color: #f4f9fc;
-    --line:#D7A6B3;
+  --text-color: #0f1b61;
+  --bg-color: #f4f9fc;
+  --line-color: #d7a6b3;
+  --font-family: "Bitter", serif;
+  --h1-size: clamp(40px, 4.5vw, 80px);
+  --h2-size: clamp(25px, 2.5vw, 30px);
 }
 
 body {
-    height: 100%;
-    padding: 0;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--bg-color);
+  height: 100%;
+  padding: 0;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
 }
 
-::selection { 
-    background: var(--line);
-    color: var(--bg);
-    text-shadow: none 
-}
-
-::-moz-selection { 
-    background:var(--line); 
-    color:#fff; 
-    text-shadow:none
+::selection,
+::-moz-selection {
+  background: var(--line-color);
+  color: var(--bg-color);
+  text-shadow: none;
 }
 
 .profile-photo {
-    height: auto;
-    border-radius: 50%;
+  height: auto;
+  border-radius: 50%;
+  max-width: 320px;
+  margin: 6vh 2vw 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 100;
+  color: var(--text-color);
 }
 
 h1 {
-    font-family: "Bitter", serif;
-    text-align: center;
-    font-weight: 100;
-    line-height: 1.125;
-    margin-bottom: 0rem;
-    color: var(--text-color);
+  line-height: 1.125;
+  margin-bottom: 0;
+  font-size: var(--h1-size);
 }
 
 h2 {
-    font-family: "Bitter", serif;
-    text-align: center;
-    font-weight: 100;
-    letter-spacing: .0075em;
-    line-height: 1.65;
-    margin-top: 2vh;
-    color: var(--text-color);
+  letter-spacing: 0.0075em;
+  line-height: 1.65;
+  margin: 2vh 20%;
+  font-size: var(--h2-size);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .socials-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4vw;
+}
+
+.fa {
+  margin: 1vh 1vw;
+  transition: opacity 0.3s ease;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-linkedin-square {
-    color: #2D64BC;
+  color: #2d64bc;
 }
 
 .fa-github-square {
-    color: #171515;
+  color: #171515;
 }
 
 .fa-envelope-square {
-    color: #D7A6B3;
+  color: var(--line-color);
 }
 
-/* For wider screens */
-@media screen and (min-width: 601px) {
-    .profile-photo {
-        max-width: 20rem;
-        margin: 6vh 2vw 0vh 2vw;
-    }
-
-    h1 {
-        font-size: max(40px, min(4.5vw, 80px));
-    }
-    
-    h2 {
-        /* Minimum size, scaling, maximum size */
-        font-size: max(20px, min(2.5vw, 30px));
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-    .fa {
-        margin: 1vh 1vw 1vh 1vw;
-    }
-
-    .socials-icon {
-        font-size: 70px;
-    }
+.socials-icon {
+  font-size: 70px;
 }
 
-/* For smaller screens */
 @media screen and (max-width: 600px) {
-    .profile-photo {
-        max-width: 60%;
-        margin: 6vh 2vw 2vh 2vw;
-    }
+  .profile-photo {
+    max-width: 60%;
+    margin: 6vh 2vw 2vh;
+  }
 
-    h1 {
-        font-size: 8vw;
-    }
-    
-    h2 {
-        font-size: 4.5vw;
-    }
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
 
-    .fa {
-        margin: 3vw;
-    }
+  h2 {
+    font-size: clamp(1rem, 4.5vw, 2rem);
+    margin: 2vh 10%;
+  }
 
-    .socials-container {
-        margin-top: 4vw;
-    }
+  .fa {
+    margin: 3vw;
+  }
 
-    .socials-icon {
-        font-size: 14vw;
-    }
+  .socials-icon {
+    font-size: 14vw;
+  }
 }
