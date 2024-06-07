@@ -19,7 +19,12 @@ body {
   font-family: var(--font-family);
 }
 
-::selection,
+::selection {
+  background: var(--line-color);
+  color: var(--bg-color);
+  text-shadow: none;
+}
+
 ::-moz-selection {
   background: var(--line-color);
   color: var(--bg-color);
